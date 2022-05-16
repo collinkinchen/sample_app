@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_bootstrap import Bootstrap
+from . import config
 
 
 # init SQLAlchemy so we can use it later in our models
@@ -11,9 +12,10 @@ def create_app():
     app = Flask(__name__)
     Bootstrap(app)
 
-    app.config['SECRET_KEY'] = 'secret-key-goes-here'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://myproject_svc:myproject_pass@localhost:3306/myproject_db'
-    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    if app.config["ENV"] == "production":
+        app.config.from_object(config.Config)
+    else:
+        app.config.from_object(config.DevConfig)
 
     db.init_app(app)
 
