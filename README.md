@@ -2,13 +2,13 @@
 
 ## Tech Stack
 
-Python3 with Flask
-Database: MySQL
+Python3 with Flask <br />
+Database: MySQL <br />
 
 ## Requirements
 
-Python3
-MySQL DB
+Python3 <br />
+MySQL DB <br />
 
 ## Install
 
