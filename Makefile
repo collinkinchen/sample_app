@@ -6,7 +6,7 @@ venv/bin/activate: requirements.txt
 run: venv/bin/activate
 	export FLASK_APP=myproject
 	export FLASK_DEBUG=1
-	python3 -m flask run
+	./venv/bin/python3 -m flask run
 
 clean:
 	rm -rf myproject/__pycache__
