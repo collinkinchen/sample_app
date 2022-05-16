@@ -8,7 +8,7 @@ Database: MySQL
 ## Requirements
 
 Python3
-MySQL
+MySQL DB
 
 ## Install
 
@@ -21,11 +21,15 @@ Edit config.py and ensure you mysql db connection is correct <br />
 make run
 ```
 
-
 ## Test
-
+functional testing of endpoints, response codes and API payloads can be done via unittest or pytest modules
+Example: get "/" - assert 200
 
 ## Monitoring
-
+Monitoring can be setup using OpenTelemetry
+https://signoz.io/blog/opentelemetry-flask/
 
 ## Improvments
+
+- Better UI with cleaner stylying and navbar
+- Pictures to go along with favorite food
