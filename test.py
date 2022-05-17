@@ -1,7 +1,7 @@
 import unittest
 import os
 import sys
-from myproject.__init__ import create_app
+from myproject import create_app
 
 
 class FlaskTest(unittest.TestCase):
