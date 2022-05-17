@@ -22,8 +22,12 @@ make run
 ```
 
 ## Test
-functional testing of endpoints, response codes and API payloads can be done via unittest or pytest modules
-Example: get "/" - assert 200
+functional testing of endpoints, response codes and API payloads can be done via unittest or pytest modules <br />
+```
+cd sample_app
+python3 test.py -v
+```
+
 
 ## Monitoring
 Monitoring can be setup using OpenTelemetry
