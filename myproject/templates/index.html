@@ -1,10 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
+<img src="{{url_for('static', filename='images/sourdough-bread.jpg')}}" align="middle" width=400px height=auto/>
+
 <h1 class="title">
-  Hello! Welcome to the home page
+  Hello! Welcome to the site
 </h1>
 <h2 class="subtitle">
-  the coolest website on the internet
+  {% if not current_user.is_authenticated %}  
+  Please login for full functionallity
+  {% endif %}
+
+  {% if current_user.is_authenticated %}  
+  So happy to have you here
+  {% endif %}
 </h2>
 {% endblock %}

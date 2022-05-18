@@ -14,5 +14,5 @@ clean:
 	rm -rf myproject/__pycache__
 	rm -rf venv
 
-test:
-	@echo $$FLASK_APP $$FLASK_DEBUG 
+test: venv/bin/activate
+	./venv/bin/python3 test.py -v

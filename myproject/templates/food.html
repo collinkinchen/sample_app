@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+    Click this button to create more of your favorite food <br />
+    Current {{ fav_food }} count is {{ food_count }}
+</h1>
+<p>
+    
+    <form method="POST" action="/update_count">
+        <input name="food_count" id="food_count" type="hidden" value={{ food_count }}>
+    <button class="button is-block is-info is-large is-fullwidth">Create more {{fav_food}}</button>
+    </form>
+</p>
+
+{% endblock %}

@@ -17,7 +17,7 @@ class FlaskTest(unittest.TestCase):
     def test_home_data(self):
         tester = create_app().test_client()
         response = tester.get('/',content_type='html/text')
-        self.assertTrue(b"Hello! Welcome to the home page" in response.data)
+        self.assertTrue(b"Hello! Welcome to the site" in response.data)
 
     # Ensure login page loads
     def test_login_status(self):
@@ -36,7 +36,7 @@ class FlaskTest(unittest.TestCase):
         tester = create_app().test_client()
         response = tester.post(
             '/login',
-            data=dict(email="test@test", password="test"),
+            data=dict(email="test@test.com", password="test"),
             follow_redirects=True
         )
         self.assertIn(b'Welcome, Collin', response.data)
