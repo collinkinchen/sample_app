@@ -16,8 +16,15 @@ MySQL DB <br />
 cd sample_app
 ```
 Edit Makefile and ensure FLASK_APP name and FLASK_ENV is correct <br />
+```
+FLASK_APP=<app_name>
+FLASK_ENV-<environment>
+```
 Edit config.py and ensure you mysql db connection is correct <br />
-<br />
+```
+'mysql://user:password@host:port/db_name'
+```
+
 Build virtual environment and install packages:
 ```
 make
