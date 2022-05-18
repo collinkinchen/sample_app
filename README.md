@@ -17,6 +17,20 @@ cd sample_app
 ```
 Edit Makefile and ensure FLASK_APP name and FLASK_ENV is correct <br />
 Edit config.py and ensure you mysql db connection is correct <br />
+<br />
+Build virtual environment and install packages:
+```
+make
+```
+Setup database tables using python3 CLI
+```
+source venv/bin/activate
+python3
+>>> from myproject import db, create_app, models
+>>> db.create_all(app=create_app()) 
+```
+
+Start the application
 ```
 make run
 ```
